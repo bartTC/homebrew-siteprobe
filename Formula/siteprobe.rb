@@ -1,25 +1,25 @@
 class Siteprobe < Formula
   desc "CLI tool to fetch URLs from sitemap.xml, check their existence, and generate performance reports"
   homepage "https://barttc.github.io/siteprobe/"
-  version "1.2.0"
+  version "1.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.2.0/siteprobe-aarch64-apple-darwin.tar.xz"
-      sha256 "24fb972a08779cca278b674bec2e7ac633a86a07ee6b09314ee431f9185a7e6d"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.2.1/siteprobe-aarch64-apple-darwin.tar.xz"
+      sha256 "8cecaa0556cbe844f4311bf06f07b9963da65d6c05c7c60bd219ee1ad06a2b90"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.2.0/siteprobe-x86_64-apple-darwin.tar.xz"
-      sha256 "8f9edc6d565fad1431deda6a7d6ce6092d167c4f8fe0522a57e4ee2671a058d3"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.2.1/siteprobe-x86_64-apple-darwin.tar.xz"
+      sha256 "b04975c14a070d48a7f09a42882807d0f6cc69dc57d540c538fa7931d1fbb61e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.2.0/siteprobe-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "575277f27f7fe232cae581543d2afe1182caf81c01b0f62044c79da85a39c981"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.2.1/siteprobe-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "35ecdfbffea3467a6cf0712085e9e1651d5d6d2d30acd9cfdfca5cb65af3c77d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.2.0/siteprobe-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c621f8b4bf7173ce5cbbd3396f7f54897232c07f5ff235bf92204042634686ce"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.2.1/siteprobe-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "301dcd5ef49c6bfab2f54c26540184d457dda588a9a282291837ff0b297b8905"
     end
   end
   license "MIT"
