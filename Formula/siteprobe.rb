@@ -5,21 +5,21 @@ class Siteprobe < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/bartTC/siteprobe/releases/download/v1.2.1/siteprobe-aarch64-apple-darwin.tar.xz"
-      sha256 "8cecaa0556cbe844f4311bf06f07b9963da65d6c05c7c60bd219ee1ad06a2b90"
+      sha256 "caf8c3b9cfeae4b1c15a81d0831e1d4039215ac05193cd33ddd520e14c55bc02"
     end
     if Hardware::CPU.intel?
       url "https://github.com/bartTC/siteprobe/releases/download/v1.2.1/siteprobe-x86_64-apple-darwin.tar.xz"
-      sha256 "b04975c14a070d48a7f09a42882807d0f6cc69dc57d540c538fa7931d1fbb61e"
+      sha256 "26850a1a19e4905c740cdb0689019a60335df6daa722539fb2e2030e2fa5de62"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/bartTC/siteprobe/releases/download/v1.2.1/siteprobe-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "35ecdfbffea3467a6cf0712085e9e1651d5d6d2d30acd9cfdfca5cb65af3c77d"
+      sha256 "95f4e5d8321159d341589a063293a8429ad2d53e1ca5328f9d9ddd7fec253dda"
     end
     if Hardware::CPU.intel?
       url "https://github.com/bartTC/siteprobe/releases/download/v1.2.1/siteprobe-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "301dcd5ef49c6bfab2f54c26540184d457dda588a9a282291837ff0b297b8905"
+      sha256 "3b7dddc4144f18214d913007d6bfd6485fe08562eb69a3b3ee87d89a2071bb43"
     end
   end
   license "MIT"
