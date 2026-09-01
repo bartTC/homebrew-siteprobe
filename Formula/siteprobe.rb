@@ -1,25 +1,25 @@
 class Siteprobe < Formula
   desc "CLI tool to fetch URLs from sitemap.xml, check their existence, and generate performance reports"
   homepage "https://barttc.github.io/siteprobe/"
-  version "1.3.0"
+  version "1.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.3.0/siteprobe-aarch64-apple-darwin.tar.xz"
-      sha256 "d51627e2dc739447dfd3d61783da605475b73e3d3315bd166399f3d16a18f7ae"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.4.0/siteprobe-aarch64-apple-darwin.tar.xz"
+      sha256 "5940c80ff436ccb3937b1d110c94a7bae22353ccb98ed438d3276e52e66a34bf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.3.0/siteprobe-x86_64-apple-darwin.tar.xz"
-      sha256 "701cd89e85162134152dd2a4c81961f85d7ef0cb98bc68f252671e331588f649"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.4.0/siteprobe-x86_64-apple-darwin.tar.xz"
+      sha256 "406516ad1a451046828e88c94b4ee0057a712c7b0eefa07b1fb4dceb1e858db8"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.3.0/siteprobe-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "fdea432af5b5ca4cdd8f7596844bfc749bf4745cacbc18b403abb1d78e9df5e0"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.4.0/siteprobe-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2638998cd5d1b1ea53eda8361f3d700e6d3747e9eb2a3ea260e09949ecb63bd5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.3.0/siteprobe-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1e9618458963454477cd6d49d0e640ac944beb64b456c585d5f10fb53638a3d0"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.4.0/siteprobe-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0533aba141db56c62ed1aa6fbbbde7221211fd7f803e02f74bfed4c646861ed9"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Siteprobe < Formula
   end
 
   def install
-    bin.install "siteprobe" if OS.mac? && Hardware::CPU.arm?
-    bin.install "siteprobe" if OS.mac? && Hardware::CPU.intel?
-    bin.install "siteprobe" if OS.linux? && Hardware::CPU.arm?
-    bin.install "siteprobe" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "siteprobe"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "siteprobe"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "siteprobe"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "siteprobe"
+    end
 
     install_binary_aliases!
 
