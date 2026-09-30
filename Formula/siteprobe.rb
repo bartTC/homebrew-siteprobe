@@ -1,25 +1,25 @@
 class Siteprobe < Formula
-  desc "CLI tool to fetch URLs from sitemap.xml, check their existence, and generate performance reports"
+  desc "CLI tool to fetch URLs from a sitemap.xml or a plain list of URLs, check their existence, and generate performance reports"
   homepage "https://barttc.github.io/siteprobe/"
-  version "1.4.0"
+  version "1.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.4.0/siteprobe-aarch64-apple-darwin.tar.xz"
-      sha256 "5940c80ff436ccb3937b1d110c94a7bae22353ccb98ed438d3276e52e66a34bf"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.5.0/siteprobe-aarch64-apple-darwin.tar.xz"
+      sha256 "da5d436c84f34056801233f7c1158fc65960bf9d27b55bded06cb7bdda83341a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.4.0/siteprobe-x86_64-apple-darwin.tar.xz"
-      sha256 "406516ad1a451046828e88c94b4ee0057a712c7b0eefa07b1fb4dceb1e858db8"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.5.0/siteprobe-x86_64-apple-darwin.tar.xz"
+      sha256 "d6a19bb1bdc5b4595a77623e1611285400d5f4bdf6c4aba968ce3d71050e6757"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.4.0/siteprobe-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "2638998cd5d1b1ea53eda8361f3d700e6d3747e9eb2a3ea260e09949ecb63bd5"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.5.0/siteprobe-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "49f83bd621d51d8d3bb59649b2f683712deeabd22e427057b0fe66d941a4cbe2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bartTC/siteprobe/releases/download/v1.4.0/siteprobe-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0533aba141db56c62ed1aa6fbbbde7221211fd7f803e02f74bfed4c646861ed9"
+      url "https://github.com/bartTC/siteprobe/releases/download/v1.5.0/siteprobe-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "55d6b8b33ba4bf46da16291929fdf979ef49553b2d624b3ebe0b328034a9cb13"
     end
   end
   license "MIT"
